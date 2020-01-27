@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:700|Merriweather:400,400i,700&display=swap');
+
+body {
+  background-color: #fcf7f8;
+  color: #171717;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 4em;
+  color: #392f5a;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 85%;
+  max-width: 4em;
+  padding-top: 0.25em;
+  border-bottom: 0.1em solid #f865b0;
+}
+
+.subheading::after {
+  display: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 1em 0 1em;
+}
+
+.content.landing {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.content.content.landing h2 {
+  margin-top: -1.5em;
+}
+
+.contacts ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.contacts ul li {
+  float: left;
+  padding: 0.75em;
+}
+
+a {
+  text-decoration: none;
+  color: #f865b0;
+}
+
+a:hover {
+  color: #392f5a;
+}
+
+a::after {
+  content: '';
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding-top: 0.25em;
+  border-bottom: 0.1em solid #392f5a;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+  padding-bottom: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .content {
+    padding: 0 10em 0 10em;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .content {
+    padding: 0 20em 0 20em;
+  }
+
+  p  {
+    max-width: 15em;
+  }
+}
