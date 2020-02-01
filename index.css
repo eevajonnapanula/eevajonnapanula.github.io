@@ -24,6 +24,10 @@ h2::after {
   border-bottom: 0.1em solid #d4257d;
 }
 
+h3 {
+  font-style: italic;
+}
+
 .subheading::after {
   display: none;
 }
