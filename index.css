@@ -9,6 +9,44 @@ body {
   font-family: 'Merriweather', serif;
 }
 
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+nav a {
+  display: block;  
+  text-align: center; 
+  text-decoration: none;
+}
+
+nav button {
+  border: 0.1rem solid #d4257d;
+  background-color: transparent;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  color:  #d4257d;
+  margin: 0.5rem;
+  font-family: 'Merriweather', serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
 h1 {
   font-family: 'Rubik', sans-serif;
   font-size: 4rem;
@@ -38,6 +76,19 @@ h3 {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0 2em 0 2em;
+}
+
+[hidden] {
+  display: none;
+}
+
+.visually-hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
 }
 
 .content.landing {
@@ -84,7 +135,7 @@ a:hover {
   color: #392f5a;
 }
 
-li a::after {
+.contacts li a::after {
   content: '';
   display: block;
   width: 100%;
@@ -109,6 +160,10 @@ footer {
   padding-bottom: 1em;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 @media only screen and (min-width: 768px) {
   .content {
     padding: 0 10em 0 10em;
@@ -121,6 +176,23 @@ footer {
   .card {
     width: 30em;
   }
+
+  #menuButton {
+    display: none;
+  }
+
+  [hidden] {
+    display: flex;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+
+  
 }
 
 @media only screen and (min-width: 1440px) {
