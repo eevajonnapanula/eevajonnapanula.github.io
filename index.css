@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:700|Merriweather:400,400i,700&display=swap');
 
+
+
 body {
   background-color: #fcf7f8;
   color: #171717;
@@ -9,12 +11,35 @@ body {
   font-family: 'Merriweather', serif;
 }
 
+main {
+  animation-name: pageLoad;
+  animation-duration: 1s;
+}
+
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 nav {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+button[aria-expanded="true"] ~ ul {
+  display: block;
+}
+
+button[aria-expanded="false"] ~ ul {
+  display: none;
 }
 
 nav ul {
@@ -36,15 +61,20 @@ nav a {
 
 nav button {
   border: 0.1rem solid #d4257d;
-  background-color: transparent;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 0.25rem;
-  color:  #d4257d;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background-color:  #d4257d;
+  color: #fcf7f8 !important;
   margin: 0.5rem;
   font-family: 'Merriweather', serif;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in-out
+}
+
+nav button:hover, nav button:focus {
+  transform: scale(1.4);
 }
 
 h1 {
@@ -76,10 +106,6 @@ h3 {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0 2em 0 2em;
-}
-
-[hidden] {
-  display: none;
 }
 
 .visually-hidden {
@@ -150,6 +176,10 @@ a:hover {
   hyphens: auto;
 }
 
+.updated {
+  font-style: italic;
+}
+
 footer {
   display: flex;
   flex-direction: column;
@@ -181,9 +211,6 @@ footer {
     display: none;
   }
 
-  [hidden] {
-    display: flex;
-  }
 
   nav ul {
     display: flex;
@@ -191,7 +218,14 @@ footer {
     justify-content: center;
   }
 
+  button[aria-expanded="false"] ~ ul {
+    display: flex;
+  }
 
+  li > a[aria-current="page"]  {
+    color: #392f5a;
+    transform: scale(1.2);
+  }
   
 }
 
