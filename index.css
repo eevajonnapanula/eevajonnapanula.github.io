@@ -1,14 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:700|Merriweather:400,400i,700&display=swap');
 
 
+:root {
+  /* Light theme */
+  --c-light-text: #171717;
+  --c-light-background: #fcf7f8;
+  --c-light-primary: #392f5a;
+  --c-light-accent: #d4257d;
+
+  /* Dark theme */
+  --c-dark-text: #fcf7f8;
+  --c-dark-background: #2C2C2C;
+  --c-dark-primary:#817A96;
+  --c-dark-accent: #E788B8;
+}
 
 body {
-  background-color: #fcf7f8;
-  color: #171717;
+  --c-text: var(--c-light-text);
+  --c-background: var(--c-light-background);
+  --c-primary: var(--c-light-primary);
+  --c-accent: var(--c-light-accent);
+  background-color: var(--c-background);
+  color: var(--c-text);
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: 'Merriweather', serif;
+}
+
+.dark {
+  --c-text: var(--c-dark-text);
+  --c-background: var(--c-dark-background);
+  --c-primary: var(--c-dark-primary);
+  --c-accent: var(--c-dark-accent);
 }
 
 main {
@@ -60,12 +84,12 @@ nav a {
 }
 
 nav button {
-  border: 0.1rem solid #d4257d;
+  border: 0.1rem solid var(--c-accent);
   width: 3rem;
   height: 3rem;
   border-radius: 100%;
-  background-color:  #d4257d;
-  color: #fcf7f8 !important;
+  background-color:  var(--c-accent);
+  color: var(--c-background) !important;
   margin: 0.5rem;
   font-family: 'Merriweather', serif;
   text-transform: uppercase;
@@ -80,7 +104,7 @@ nav button:hover, nav button:focus {
 h1 {
   font-family: 'Rubik', sans-serif;
   font-size: 4rem;
-  color: #392f5a;
+  color: var(--c-primary);
 }
 
 h2::after {
@@ -89,7 +113,7 @@ h2::after {
   width: 85%;
   max-width: 4em;
   padding-top: 0.25em;
-  border-bottom: 0.1em solid #d4257d;
+  border-bottom: 0.1em solid var(--c-accent);
 }
 
 h3 {
@@ -144,7 +168,7 @@ h3 {
   height: 2px;
   width: 10em;
   margin: auto;
-  border-bottom: 0.5px solid #392f5a;
+  border-bottom: 0.5px solid var(--c-primary);
   display: block;
 }
 
@@ -154,11 +178,11 @@ h3 {
 
 a {
   text-decoration: none;
-  color: #d4257d;
+  color: var(--c-accent);
 }
 
 a:hover {
-  color: #392f5a;
+  color: var(--c-primary);
 }
 
 .contacts li a::after {
@@ -167,7 +191,7 @@ a:hover {
   width: 100%;
   margin: auto;
   padding-top: 0.25em;
-  border-bottom: 0.1em solid #392f5a;
+  border-bottom: 0.1em solid var(--c-primary);
 }
 
 .about {
@@ -223,7 +247,7 @@ footer {
   }
 
   li > a[aria-current="page"]  {
-    color: #392f5a;
+    color: var(--c-primary);
     transform: scale(1.2);
   }
   
