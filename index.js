@@ -1,12 +1,25 @@
-const navButton = document.querySelector('nav button')
+const themeCheck = document.getElementById('themeButton')
+const themeCheckWrapper = document.getElementsByClassName('theme-switch-wrapper')
+function addOrRemoveDarkTheme(condition) {
+  if (condition) {
+    document.querySelector('body').classList.add('dark')
+  } else {
+    document.querySelector('body').classList.remove('dark')
+  }
+}
 
-navButton.addEventListener('click', function () {
-  const expanded = this.getAttribute('aria-expanded') === 'true'
-  this.setAttribute('aria-expanded', !expanded)
-})
+function handleThemeChange(event, checked) {
+  localStorage.setItem('darkMode', !checked)
+  themeCheck.setAttribute('aria-checked', !checked)
+  addOrRemoveDarkTheme(!checked)
+}
 
-const themeCheck = document.getElementById('theme')
+document.addEventListener('DOMContentLoaded', function () {
+  themeCheck.setAttribute('aria-checked', localStorage.getItem('darkMode') === 'true')
+  addOrRemoveDarkTheme(localStorage.getItem('darkMode') === 'true')
 
-themeCheck.addEventListener('change', function (event) {
-  event.target.checked ? document.querySelector('body').classList.add('dark') : document.querySelector('body').classList.remove('dark')
+  themeCheck.addEventListener('click', function (event) {
+    const checked = localStorage.getItem('darkMode') === 'true'
+    handleThemeChange(event, checked)
+  })
 })
