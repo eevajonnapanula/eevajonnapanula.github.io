@@ -11,6 +11,11 @@ function addOrRemoveDarkTheme(condition) {
 function handleThemeChange(event, checked) {
   localStorage.setItem('darkMode', !checked)
   themeCheck.setAttribute('aria-checked', !checked)
+  if (checked) {
+    themeCheck.setAttribute('aria-label', "Switch to dark theme")
+  } else {
+    themeCheck.setAttribute('aria-label', "Switch to light theme")
+  }
   addOrRemoveDarkTheme(!checked)
 }
 

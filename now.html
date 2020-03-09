@@ -17,17 +17,17 @@
 <body>
   <header>
     <a href="#main" class="visually-hidden"">Skip navigation</a>
-    <nav id=" navigation" aria-lbelledby="navigationMenu">
+    <nav id=" navigation" aria-labelledby="navigationMenu">
       <h2 id="navigationMenu" class="visually-hidden">Menu</h2>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/now" aria-current="page">Now</a></li>
       </ul>
       <div class="theme-switch-wrapper" id="theme-switch-wrapper">
-        <label class="theme-switch" for="theme">
-          <input type="checkbox" id="theme" />
-          <div class="slider round"></div>
-        </label>
+        <button type="button" role="switch" aria-checked="true" id="themeButton" class="theme-switch"
+          aria-label="Switch to light theme">
+          <span class="slider round"></span>
+        </button>
       </div>
       </nav>
 

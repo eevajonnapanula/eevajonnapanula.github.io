@@ -12,9 +12,9 @@
   /* Dark theme */
   --c-dark-text: #fcf7f8;
   --c-dark-background: #2C2C2C;
-  --c-dark-primary:#817A96;
+  --c-dark-primary:#9792A9;
   --c-dark-accent: #E788B8;
-  --c-dark-slider: #817A96;
+  --c-dark-slider: #9792A9;
 }
 
 body {
