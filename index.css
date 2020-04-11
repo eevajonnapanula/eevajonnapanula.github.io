@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:700|Merriweather:400,400i,700&display=swap');
 
-
 :root {
   /* Light theme */
   --c-light-text: #171717;
@@ -11,10 +10,10 @@
 
   /* Dark theme */
   --c-dark-text: #fcf7f8;
-  --c-dark-background: #2C2C2C;
-  --c-dark-primary:#9792A9;
-  --c-dark-accent: #E788B8;
-  --c-dark-slider: #9792A9;
+  --c-dark-background: #2c2c2c;
+  --c-dark-primary: #9792a9;
+  --c-dark-accent: #e788b8;
+  --c-dark-slider: #9792a9;
 }
 
 body {
@@ -59,16 +58,16 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-width: 40rem;
+  margin: 0 auto;
 }
-
 
 nav ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  margin: 0;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 nav li {
@@ -77,16 +76,15 @@ nav li {
 }
 
 nav a {
-  display: block;  
-  text-align: center; 
+  display: block;
+  text-align: center;
   text-decoration: none;
 }
 
-li > a[aria-current="page"]  {
+li > a[aria-current='page'] {
   color: var(--c-primary);
   transform: scale(1.2);
 }
-
 
 h1 {
   font-family: 'Rubik', sans-serif;
@@ -120,12 +118,12 @@ h3 {
 }
 
 .visually-hidden {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .content.landing {
@@ -230,25 +228,25 @@ footer {
   position: absolute;
   right: 0;
   top: 0;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
   background-color: #fff;
   bottom: 0.3rem;
-  content: "";
+  content: '';
   height: 1.625rem;
   left: 0.25rem;
   position: absolute;
-  transition: .4s;
+  transition: 0.4s;
   width: 1.625rem;
 }
 
-[role="switch"][aria-checked="true"] > .slider {
+[role='switch'][aria-checked='true'] > .slider {
   background-color: var(--c-dark-slider);
 }
 
-[role="switch"][aria-checked="true"] > .slider:before {
+[role='switch'][aria-checked='true'] > .slider:before {
   transform: translateX(1.625rem);
 }
 
@@ -262,27 +260,13 @@ footer {
 
 @media only screen and (min-width: 768px) {
   .content {
-    padding: 0 10em 0 10em;
-  }
-
-  nav {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    margin: 0 auto;
+    max-width: 30rem;
   }
 
   nav ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .content {
-    padding: 0 25rem 0 25rem;
-  }
-  nav {
-    padding-left: 25rem;
-    padding-right: 25rem;
   }
 }
