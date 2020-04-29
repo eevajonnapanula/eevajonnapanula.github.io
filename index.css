@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:700|Merriweather:400,400i,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:700|Montserrat:400,400i,700&display=swap');
 
 :root {
   /* Light theme */
@@ -27,7 +27,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Merriweather', serif;
+  font-family: 'Montserrat', serif;
 }
 
 .dark {
@@ -41,6 +41,11 @@ body {
 main {
   animation-name: pageLoad;
   animation-duration: 1s;
+}
+
+*:focus {
+  padding: 0.2rem;
+  outline: 0.2rem dashed var(--c-primary);
 }
 
 @keyframes pageLoad {
@@ -124,6 +129,13 @@ h3 {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+.visually-hidden:focus {
+  left: 0;
+  width: auto;
+  height: auto;
+  overflow: auto;
 }
 
 .content.landing {
