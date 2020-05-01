@@ -217,6 +217,7 @@ footer {
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
+  margin-left: 1rem;
 }
 
 .theme-switch {
@@ -285,6 +286,13 @@ footer {
 
 .project-card:not(:last-child) {
   margin-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 768px) {
