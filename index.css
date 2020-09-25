@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:700|Montserrat:400,400i,700&display=swap');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Rubik:700|Montserrat:400,400i,700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons&display=swap");
 
 :root {
   /* Light theme */
@@ -28,7 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
   font-size: 125%;
 }
 
@@ -85,22 +85,22 @@ nav li {
 nav a {
   display: block;
   text-align: center;
+}
+
+li > a[aria-current="page"] {
+  color: var(--c-primary);
+  transform: scale(1.2);
   text-decoration: none;
 }
 
-li > a[aria-current='page'] {
-  color: var(--c-primary);
-  transform: scale(1.2);
-}
-
 h1 {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 4rem;
   color: var(--c-primary);
 }
 
 h2::after {
-  content: '';
+  content: "";
   display: block;
   width: 85%;
   max-width: 4em;
@@ -115,7 +115,6 @@ h3 {
 .subheading::after {
   display: none;
 }
-
 
 .content {
   display: flex;
@@ -168,7 +167,7 @@ h3 {
 }
 
 .card::after {
-  content: '';
+  content: "";
   height: 2px;
   width: 10em;
   margin: auto;
@@ -185,12 +184,14 @@ svg {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: var(--c-accent);
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--c-primary);
+  text-decoration: none;
 }
 
 img {
@@ -198,7 +199,7 @@ img {
 }
 
 .contacts li a::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   margin: auto;
@@ -223,6 +224,10 @@ footer {
   position: relative;
   bottom: 0;
   padding-bottom: 1em;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 .bold {
@@ -261,7 +266,7 @@ footer {
 .slider:before {
   background-color: #fff;
   bottom: 0.3rem;
-  content: '';
+  content: "";
   height: 1.625rem;
   left: 0.25rem;
   position: absolute;
@@ -269,11 +274,11 @@ footer {
   width: 1.625rem;
 }
 
-[role='switch'][aria-checked='true'] > .slider {
+[role="switch"][aria-checked="true"] > .slider {
   background-color: var(--c-dark-slider);
 }
 
-[role='switch'][aria-checked='true'] > .slider:before {
+[role="switch"][aria-checked="true"] > .slider:before {
   transform: translateX(1.625rem);
 }
 
