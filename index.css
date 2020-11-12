@@ -321,6 +321,10 @@ footer a {
   align-items: center;
 }
 
+.blog-post:not(:last-child) {
+  border-bottom: 0.15rem solid var(--c-primary);
+}
+
 @media only screen and (min-width: 768px) {
   .content {
     margin: 0 auto;
